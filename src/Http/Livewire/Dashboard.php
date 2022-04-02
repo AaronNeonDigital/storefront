@@ -15,7 +15,7 @@ class Dashboard extends Component
      */
     public function getSaleCollectionProperty()
     {
-        return Url::whereElementType(Collection::class)->whereSlug('cars')->first()?->element;
+        return Url::whereElementType(Collection::class)->whereSlug(config('storefront')['home_key_word'])->first()?->element;
     }
 
     /**
