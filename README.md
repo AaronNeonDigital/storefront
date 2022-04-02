@@ -14,7 +14,7 @@ php artisan vendor:publish --tag=public
 ```
 Publish the config files
 ```bash
-php artisan vendor:publish --tag=config
+php artisan vendor:publish --tag=storefront
 ```
 
 # Config options
