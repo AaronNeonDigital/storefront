@@ -16,6 +16,14 @@ Publish the config files
 ```bash
 php artisan vendor:publish --tag=storefront
 ```
+Publish Views
+```bash
+php artisan vendor:publish --tag=views
+```
+Publish components
+```bash
+php artisan vendor:publish --tag=view-components
+```
 
 # Config options
 `Aaron\Storefront` has config options which once published, you can change area's of the application to help suit your needs. 
