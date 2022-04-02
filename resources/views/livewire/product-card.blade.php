@@ -1,4 +1,5 @@
-<div class="wrapper bg-gray-200 antialiased text-gray-900">
+
+<a class="wrapper bg-gray-200 antialiased text-gray-900" href="{{ route('product.view', $product->defaultUrl->slug) }}">
     <div>
         @if ($product->thumbnail)
             <img class="w-full object-cover object-center rounded-lg shadow-md"
@@ -34,7 +35,7 @@
         </div>
 
     </div>
-</div>
+</a>
 
 {{-- <a class="block group rounded-lg shadow-lg" href="{{ route('product.view', $product->defaultUrl->slug) }}">
     <div class="overflow-hidden rounded-lg aspect-w-1 aspect-h-1">
