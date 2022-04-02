@@ -5,9 +5,13 @@ We use a variety of packages, but this is a `GetCandy2` addon, and wont work wit
 `Tailwind`, `AlpineJS`, `GetCandy2` are some of the packages required to install this application.
 
 # Storefront publishables
-`Aaron\Storefront` has publishables, which allow you to easily change and update files at your own leisure. By entering the command below, you can publish these files.
+`Aaron\Storefront` has publishables, which allow you to easily change and update files at your own leisure. By entering the command below, you can publish the public files.
 ```bash
 php artisan vendor:publish --tag=public
+```
+Publish the config files
+```bash
+php artisan vendor:publish --tag=config
 ```
 
 # Config options
