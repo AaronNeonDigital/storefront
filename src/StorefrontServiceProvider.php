@@ -11,6 +11,7 @@ use Aaron\Storefront\Http\Livewire\ProductCard;
 use Aaron\Storefront\Http\Livewire\ProductPage;
 use Aaron\Storefront\Http\Livewire\MegaMenu;
 use Aaron\Storefront\Http\Livewire\MegaMenuSub;
+use Aaron\Storefront\Http\Livewire\Settings\SearchCollections;
 use Illuminate\Support\ServiceProvider;
 use GetCandy\Hub\Facades\Menu;
 use Livewire\Livewire;
@@ -28,30 +29,27 @@ class StorefrontServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'storefront');
 
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         $this->registerLivewireComponents();
 
         //Publishing
         if ($this->app->runningInConsole()) {
-            collect($this->configFiles)->each(function ($config) {
-                $this->publishes([
-                    "{$this->root}/config/$config.php" => config_path("storefront/$config.php"),
-                ], 'storefront');
-            });
 
             //Publish the views
             $this->publishes([
                 __DIR__ . '/resources/views' => resource_path('views/vendor/storefront'),
-            ], 'views');
+            ], 'storefront-views');
 
             // // Publish view components
             $this->publishes([
                 __DIR__ . '/src/View/Components/' => app_path('View/Components'),
                 __DIR__ . '/resources/views/components/' => resource_path('views/components'),
-            ], 'view-components');
+            ], 'storefront-view-components');
 
             $this->publishes([
                 __DIR__ . '/../public' => public_path('vendor/aaron/storefront'),
-            ], 'public');
+            ], 'storefront-public');
         }
     }
     protected function registerLivewireComponents()
@@ -65,6 +63,7 @@ class StorefrontServiceProvider extends ServiceProvider
         Livewire::component('cart', Cart::class);
         Livewire::component('mega-menu-sub', MegaMenuSub::class);
         Livewire::component('collection-page', CollectionPage::class);
+        Livewire::component('search-collections', SearchCollections::class);
 
         // Blade Components
         Blade::componentNamespace('Aaron\\Storefront\\Views\\Components', 'storefront');
@@ -86,8 +85,6 @@ class StorefrontServiceProvider extends ServiceProvider
                 ->route('storefront.settings.view')
                 ->icon('cog');
         });
-
-        $slot = Menu::slot('sidebar');
 
         $slot->addItem(function ($item) {
             $item->name('Back to store')

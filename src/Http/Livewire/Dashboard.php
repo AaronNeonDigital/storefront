@@ -2,6 +2,7 @@
 
 namespace Aaron\Storefront\Http\Livewire;
 
+use Aaron\Storefront\Models\Settings;
 use GetCandy\Models\Collection;
 use GetCandy\Models\Url;
 use Livewire\Component;
@@ -15,7 +16,7 @@ class Dashboard extends Component
      */
     public function getSaleCollectionProperty()
     {
-        return Url::whereElementType(Collection::class)->whereSlug(config('storefront.storefront')['home_key_word'])->first()?->element;
+        return Url::whereElementType(Collection::class)->whereSlug(Settings::first()->home_key_word)->first()?->element;
     }
 
     /**
@@ -30,6 +31,8 @@ class Dashboard extends Component
 
     public function render()
     {
-        return view('storefront::livewire.dashboard')->layout('storefront::layouts.app');
+        return view('storefront::livewire.dashboard',[
+            'settings' => Settings::first()
+        ])->layout('storefront::layouts.app');
     }
 }

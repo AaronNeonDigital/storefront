@@ -4,8 +4,6 @@ namespace Aaron\Storefront\Http\Livewire;
 
 use GetCandy\Models\Collection;
 use Livewire\Component;
-use GetCandy\Models\Url;
-use Kalnoy\Nestedset\NestedSet;
 
 class MegaMenu extends Component
 {
