@@ -1,8 +1,8 @@
 # Storefront
-`Aaron\Storefront` is a service that provides a `GetCandy2` Storefront to a fresh application in laravel.
+`Aaron\Storefront` is a service that provides a [GetCandy2](https://getcandy.io/) Storefront to a fresh application in laravel.
 We use a variety of packages, but this is a `GetCandy2` addon, and wont work with any other e-commerce platform.
 
-`Tailwind`, `AlpineJS`, `GetCandy2` are some of the packages required to install this application.
+`Tailwind`, `AlpineJS`, [GetCandy2](https://getcandy.io/) are some of the packages required to install this application.
 
 # Storefront publishables
 `Aaron\Storefront` has publishables, which allow you to easily change and update files at your own leisure. By entering the command below, you can publish the public files.
