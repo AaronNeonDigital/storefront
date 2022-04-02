@@ -71,9 +71,6 @@ class StorefrontServiceProvider extends ServiceProvider
 
     public function register()
     {
-        collect($this->configFiles)->each(function ($config) {
-            $this->mergeConfigFrom("{$this->root}/config/$config.php", "storefront.$config");
-        });
 
         /**
          * Adding setting page to the hub sidebar.

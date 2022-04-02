@@ -10,27 +10,18 @@ GetCandy provides a explicit framework aimed and building e-commerce application
 # Storefront publishables
 `Aaron\Storefront` has publishables, which allow you to easily change and update files at your own leisure. By entering the command below, you can publish the public files.
 ```bash
-php artisan vendor:publish --tag=public
-```
-Publish the config files
-```bash
-php artisan vendor:publish --tag=storefront
+php artisan vendor:publish --tag=storefront-public
 ```
 Publish Views
 ```bash
-php artisan vendor:publish --tag=views
+php artisan vendor:publish --tag=storefront-views
 ```
 Publish components
 ```bash
-php artisan vendor:publish --tag=view-components
+php artisan vendor:publish --tag=storefront-view-components
 ```
+# Feature home page
+The feature home page displays particular collection items, these collections are selected in `storefront settings` located on the GetCandy hub.
+at first, no collections will be available upon installing `GetCandy` and collections must be added, via `<your-site>/hub/collection-groups` and product must then be associated to those collections.
+# Settings options
 
-# Config options
-`Aaron\Storefront` has config options which once published, you can change area's of the application to help suit your needs. 
-
-`home_key_word` is the default word/slug you wish to display products for.
-If you would like to display sale items by default, setting this to `Sale` will display products with the `Sale` collection attribute to it.
-This can be changed and edited within the `config/storefront/storefront.php` file.
-```php
-'home_key_word' => 'Sale'
-```
