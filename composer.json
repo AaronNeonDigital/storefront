@@ -1,0 +1,24 @@
+{
+    "name": "aaron/storefront",
+    "description": "Storefront that links to getcandy 2 api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aaron Lawrence",
+            "email": "aaron.lawrence@neondigital.co.uk"
+        }
+    ],
+    "require": {},
+    "autoload" : {
+        "psr-4": {
+            "Aaron\\Storefront\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aaron\\Storefront\\StorefrontServiceProvider"
+            ]
+        }
+    }
+}
