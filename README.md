@@ -22,7 +22,7 @@ php artisan vendor:publish --tag=storefront
 
 `home_key_word` is the default word/slug you wish to display products for.
 If you would like to display sale items by default, setting this to `Sale` will display products with the `Sale` collection attribute to it.
-This can be changed and edited within the `config/storefront.php` file.
+This can be changed and edited within the `config/storefront/storefront.php` file.
 ```php
 'home_key_word' => 'Sale'
 ```
