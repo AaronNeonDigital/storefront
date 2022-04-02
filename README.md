@@ -2,7 +2,7 @@
 `Aaron\Storefront` is a service that provides a [GetCandy2](https://getcandy.io/) Storefront to a fresh application in laravel.
 We use a variety of packages, but this is a `GetCandy2` addon, and wont work with any other e-commerce platform.
 
-`Tailwind`, `AlpineJS`, [GetCandy2](https://getcandy.io/) are some of the packages required to install this application.
+`Tailwind`, `AlpineJS`, `Livewire` [GetCandy2](https://getcandy.io/) are some of the packages required to install this application.
 # GetCandy
 GetCandy have awesome documentations which can be viewed at: [GetCandy Documentation](https://docs.getcandy.io/)
 GetCandy provides a explicit framework aimed and building e-commerce applications, it utilises laravel to get the best results whilst doing most of the work for you.
