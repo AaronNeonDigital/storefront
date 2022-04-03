@@ -7,11 +7,29 @@ use Livewire\Component;
 
 class SettingsIndex extends Component
 {
+    public $keyword;
+
+    protected $listeners = ['keywordChanged'];
+
+    public function keywordChanged()
+    {
+        /**
+         * Update the keyword to the current keyword stored in settings.
+         */
+        $this->keyword = Settings::first()['home_key_word'];
+    }
+
+    public function mount()
+    {
+        /**
+         * On render update the keyword variable.
+         */
+        $this->keywordChanged();
+    }
+
     public function render()
     {
-        return view('storefront::livewire/settings/settings-index',[
-            'settings' => Settings::first()
-        ])->layout('adminhub::layouts.app', [
+        return view('storefront::livewire/settings/settings-index')->layout('adminhub::layouts.app', [
             'title' => 'Storefront settings',
         ]);
     }

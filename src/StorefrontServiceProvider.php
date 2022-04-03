@@ -12,6 +12,7 @@ use Aaron\Storefront\Http\Livewire\ProductPage;
 use Aaron\Storefront\Http\Livewire\MegaMenu;
 use Aaron\Storefront\Http\Livewire\MegaMenuSub;
 use Aaron\Storefront\Http\Livewire\Settings\SearchCollections;
+use Aaron\Storefront\Http\Livewire\Settings\SettingsIndex;
 use Illuminate\Support\ServiceProvider;
 use GetCandy\Hub\Facades\Menu;
 use Livewire\Livewire;
@@ -64,6 +65,7 @@ class StorefrontServiceProvider extends ServiceProvider
         Livewire::component('mega-menu-sub', MegaMenuSub::class);
         Livewire::component('collection-page', CollectionPage::class);
         Livewire::component('search-collections', SearchCollections::class);
+        Livewire::component('search-index', SettingsIndex::class);
 
         // Blade Components
         Blade::componentNamespace('Aaron\\Storefront\\Views\\Components', 'storefront');

@@ -1,11 +1,12 @@
 <section>
-    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+    <div class="px-4 py-6 mx-auto sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white rounded-md shadow-lg w-3/4 md:max-w-2xl">
             <div class="text-indigo-500 flex flex-col justify-between">
                 @if ($this->image)
                     <img class="rounded-xl" src="{{ $this->image->getUrl('small') }}"
                         alt="{{ $this->product->translateAttribute('name') }}" />
                 @endif
+                
                 <div>
                     <form class="mt-8">
                         @foreach ($this->productOptions as $option)

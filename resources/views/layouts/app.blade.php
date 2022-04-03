@@ -56,7 +56,7 @@
             </div>
         </div>
     </footer>
-
+    <x-hub::notification />
     @livewireScripts
 
     <!-- Scripts -->

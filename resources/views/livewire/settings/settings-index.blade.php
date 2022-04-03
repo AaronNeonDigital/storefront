@@ -14,7 +14,7 @@
                         on the feature page.
                     </div>
                     <div class="ml-4 text-sm">    
-                        Currently set as: <span class="font-semibold">{{  $settings?->home_key_word }}</span> Last updated <span class="font-semibold">{{  $settings?->updated_at }}</span>
+                        Currently set as: <span class="font-semibold">{{  $keyword  }}</span>
                     </div>
                     <div class="ml-4">
                         @livewire('search-collections')
