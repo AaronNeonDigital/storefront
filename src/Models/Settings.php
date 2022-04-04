@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaron\Storefront\Models;
+namespace Aaronneondigital\Storefront\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

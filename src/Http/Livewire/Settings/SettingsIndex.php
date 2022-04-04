@@ -1,8 +1,8 @@
 <?php
 
-namespace Aaron\Storefront\Http\Livewire\Settings;
+namespace Aaronneondigital\Storefront\Http\Livewire\Settings;
 
-use Aaron\Storefront\Models\Settings;
+use Aaronneondigital\Storefront\Models\Settings;
 use Livewire\Component;
 
 class SettingsIndex extends Component

@@ -1,8 +1,8 @@
 <?php
 
-namespace Aaron\Storefront\Http\Livewire;
+namespace Aaronneondigital\Storefront\Http\Livewire;
 
-use Aaron\Storefront\Models\Settings;
+use Aaronneondigital\Storefront\Models\Settings;
 use GetCandy\Models\Collection;
 use GetCandy\Models\Url;
 use Livewire\Component;

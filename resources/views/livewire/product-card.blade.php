@@ -16,9 +16,6 @@
                     <span class="bg-teal-200 text-teal-800 text-xs m-1 px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                         Android
                     </span>
-                    {{-- <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-                        2 baths &bull; 3 rooms
-                    </div> --}}
                 </div>
 
                 <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">{{ $product->translateAttribute('name') }}</h4>

@@ -1,8 +1,8 @@
 <?php
 
-namespace Aaron\Storefront\Http\Livewire;
+namespace Aaronneondigital\Storefront\Http\Livewire;
 
-use Aaron\Storefront\Http\Traits\FetchesUrls;
+use Aaronneondigital\Storefront\Http\Traits\FetchesUrls;
 use GetCandy\Models\Product;
 use Livewire\Component;
 use Livewire\ComponentConcerns\PerformsRedirects;

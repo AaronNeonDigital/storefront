@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaron\Storefront\Http\Livewire;
+namespace Aaronneondigital\Storefront\Http\Livewire;
 
 use Livewire\Component;
 use GetCandy\Models\ProductType;

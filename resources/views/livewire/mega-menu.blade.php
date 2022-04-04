@@ -1,7 +1,7 @@
 <div>
     <nav class="shadow-lg border-t-4 border-blue-500 z-49 relative">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
+            <div class="flex justify-between flex-wrap ">
                 @if ($this->allCollection)
                         
                         @foreach ($this->allCollection as $collection)

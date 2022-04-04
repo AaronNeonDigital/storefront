@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaron\Storefront\Http\Traits;
+namespace Aaronneondigital\Storefront\Http\Traits;
 
 use GetCandy\Models\Url;
 

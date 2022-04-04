@@ -1,18 +1,18 @@
 <?php
 
-namespace Aaron\Storefront;
+namespace Aaronneondigital\Storefront;
 
-use Aaron\Storefront\Http\Livewire\Cart;
-use Aaron\Storefront\Http\Livewire\CollectionPage;
-use Aaron\Storefront\Http\Livewire\Dashboard;
-use Aaron\Storefront\Http\Livewire\Header;
-use Aaron\Storefront\Http\Livewire\ProductPrice;
-use Aaron\Storefront\Http\Livewire\ProductCard;
-use Aaron\Storefront\Http\Livewire\ProductPage;
-use Aaron\Storefront\Http\Livewire\MegaMenu;
-use Aaron\Storefront\Http\Livewire\MegaMenuSub;
-use Aaron\Storefront\Http\Livewire\Settings\SearchCollections;
-use Aaron\Storefront\Http\Livewire\Settings\SettingsIndex;
+use Aaronneondigital\Storefront\Http\Livewire\Cart;
+use Aaronneondigital\Storefront\Http\Livewire\CollectionPage;
+use Aaronneondigital\Storefront\Http\Livewire\Dashboard;
+use Aaronneondigital\Storefront\Http\Livewire\Header;
+use Aaronneondigital\Storefront\Http\Livewire\ProductPrice;
+use Aaronneondigital\Storefront\Http\Livewire\ProductCard;
+use Aaronneondigital\Storefront\Http\Livewire\ProductPage;
+use Aaronneondigital\Storefront\Http\Livewire\MegaMenu;
+use Aaronneondigital\Storefront\Http\Livewire\MegaMenuSub;
+use Aaronneondigital\Storefront\Http\Livewire\Settings\SearchCollections;
+use Aaronneondigital\Storefront\Http\Livewire\Settings\SettingsIndex;
 use Illuminate\Support\ServiceProvider;
 use GetCandy\Hub\Facades\Menu;
 use Livewire\Livewire;
@@ -39,17 +39,17 @@ class StorefrontServiceProvider extends ServiceProvider
 
             //Publish the views
             $this->publishes([
-                __DIR__ . '/resources/views' => resource_path('views/vendor/storefront'),
+                $this->root.'/resources/views' => resource_path('views/vendor/storefront'),
             ], 'storefront-views');
 
             // // Publish view components
             $this->publishes([
-                __DIR__ . '/src/View/Components/' => app_path('View/Components'),
-                __DIR__ . '/resources/views/components/' => resource_path('views/components'),
+                $this->root.'/src/View/Components/' => app_path('View/Components'),
+                $this->root.'/resources/views/components/' => resource_path('views/components'),
             ], 'storefront-view-components');
 
             $this->publishes([
-                __DIR__ . '/../public' => public_path('vendor/aaron/storefront'),
+                __DIR__ . '/../public' => public_path('vendor/aaronneondigital/storefront'),
             ], 'storefront-public');
         }
     }
@@ -68,7 +68,7 @@ class StorefrontServiceProvider extends ServiceProvider
         Livewire::component('search-index', SettingsIndex::class);
 
         // Blade Components
-        Blade::componentNamespace('Aaron\\Storefront\\Views\\Components', 'storefront');
+        Blade::componentNamespace('Aaronneondigital\\Storefront\\Views\\Components', 'storefront');
     }
 
     public function register()

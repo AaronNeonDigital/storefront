@@ -1,5 +1,5 @@
 {
-    "name": "aaron/storefront",
+    "name": "aaronneondigital/storefront",
     "description": "Storefront that links to getcandy 2 api",
     "license": "MIT",
     "authors": [
@@ -11,13 +11,13 @@
     "require": {},
     "autoload" : {
         "psr-4": {
-            "Aaron\\Storefront\\" : "src/"
+            "Aaronneondigital\\Storefront\\" : "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Aaron\\Storefront\\StorefrontServiceProvider"
+                "Aaronneondigital\\Storefront\\StorefrontServiceProvider"
             ]
         }
     }

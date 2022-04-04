@@ -1,8 +1,8 @@
 <?php
 
-namespace Aaron\Storefront\Http\Livewire\Settings;
+namespace Aaronneondigital\Storefront\Http\Livewire\Settings;
 
-use Aaron\Storefront\Models\Settings;
+use Aaronneondigital\Storefront\Models\Settings;
 use GetCandy\Hub\Http\Livewire\Traits\Notifies;
 use GetCandy\Models\Collection;
 use Livewire\Component;
@@ -61,7 +61,7 @@ class SearchCollections extends Component
             $this->notify($item.' was already the keyword, nothing has been changed', null, [], 'error');
         }
         /**
-         * Make an emit, to change the current variable, on parent livewire component.
+         * Make an emit, to change the current variable, on parent livewire
          */
         $this->emit('keywordChanged');
     }

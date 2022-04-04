@@ -1,10 +1,10 @@
 <?php
 
-use Aaron\Storefront\Http\Livewire\CollectionPage;
-use Aaron\Storefront\Http\Livewire\ProductPage;
-use Aaron\Storefront\Http\Livewire\Settings\SettingsIndex;
+use Aaronneondigital\Storefront\Http\Livewire\CollectionPage;
+use Aaronneondigital\Storefront\Http\Livewire\ProductPage;
+use Aaronneondigital\Storefront\Http\Livewire\Settings\SettingsIndex;
 use Illuminate\Support\Facades\Route;
-use Aaron\Storefront\Http\Livewire\Dashboard;
+use Aaronneondigital\Storefront\Http\Livewire\Dashboard;
 use GetCandy\Hub\Http\Middleware\Authenticate;
 
 App::booted(function() {
@@ -27,17 +27,7 @@ Route::group([
         Route::group([
             'prefix' => 'storefront'
         ], function ($router) {
-            // Route::group([
-            //     'middleware' => 'can:settings:core',
-            // ], function () {
                 Route::get('/settings/index', SettingsIndex::class)->name('storefront.settings.view');
-            // });
         });
     });
 });
-
-// Route::group([
-//     'middleware' => 'can:settings:core',
-// ], function () {
-//     Route::get('/settings/index', SettingsIndex::class)->name('settings.view');
-// });

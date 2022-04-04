@@ -1,6 +1,6 @@
 <?php 
 
-namespace Aaron\Storefront\Views\Components;
+namespace Aaronneondigital\Storefront\Views\Components;
 
 use Illuminate\Support\Collection;
 use Illuminate\View\Component;
